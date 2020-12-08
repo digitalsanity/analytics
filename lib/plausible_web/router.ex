@@ -87,7 +87,7 @@ defmodule PlausibleWeb.Router do
   end
 
   scope "/", PlausibleWeb do
-    pipe_through [:browser, :csrf]
+    pipe_through :browser #default- [:browser, :csrf]
 
     get "/password", AuthController, :password_form
     post "/password", AuthController, :set_password
