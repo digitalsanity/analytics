@@ -4,20 +4,22 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Plausible is a lightweight and open-source web analytics tool. Your website data is 100% yours and the privacy of your visitors is respected."/>
+    <meta name="description" content=""/>
     <link rel="icon" type="image/png" sizes="32x32" href="<%= PlausibleWeb.Router.Helpers.static_path(@conn, "/images/icon/plausible_favicon.png") %>">
     <link rel="apple-touch-icon" href="/images/icon/apple-touch-icon.png">
-    <title><%= assigns[:title] || "Plausible · Simple, privacy-friendly alternative to Google Analytics" %></title>
+    <title><%= assigns[:title] || "SHARPEnet Hub Basic Analytics" %></title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
     <%= render("_tracking.html", assigns) %>
   </head>
   <body class="flex flex-col h-full bg-gray-50">
     <nav class="relative py-8 z-10">
       <div class="container">
-        <nav class="relative flex items-center justify-between sm:h-10 md:justify-center">
+        <nav class="relative flex items-center justify-between sm:h-10 md:justify-center hidden">
           <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
             <div class="flex items-center justify-between">
-              <a href="<%= home_dest(@conn) %>"><%= img_tag(PlausibleWeb.Router.Helpers.static_path(@conn, "/images/icon/plausible_logo.png"), class: "h-8 w-auto sm:h-10 -mt-2", alt: "Plausible logo") %></a>
+              <a href="<%= home_dest(@conn) %>">
+              <%= img_tag(PlausibleWeb.Router.Helpers.static_path(@conn, "/images/icon/plausible_logo.png"), class: "h-8 w-auto sm:h-10 -mt-2 hidden", alt: "logo") %>
+              </a>
             </div>
           </div>
           <div class="absolute flex items-center justify-end inset-y-0 right-0">

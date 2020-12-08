@@ -4,14 +4,14 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="A lightweight, non-intrusive alternative to Google Analytics."/>
+    <meta name="description" content=""/>
     <link rel="icon" type="image/png" sizes="32x32" href="<%= PlausibleWeb.Router.Helpers.static_path(@conn, "/images/icon/plausible_favicon.png") %>">
-    <title><%= assigns[:title] || "Plausible · Web analytics" %></title>
+    <title><%= assigns[:title] || "SHARPEnet Hub · Web analytics" %></title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
     <%= render("_tracking.html", assigns) %>
   </head>
   <body class="flex flex-col h-full bg-gray-100">
-    <div class="text-center w-full my-8">
+    <div class="text-center w-full my-8 hidden">
         <a href="<%= home_dest(@conn) %>">
           <%= img_tag(PlausibleWeb.Router.Helpers.static_path(@conn, "/images/icon/plausible_logo.png"), class: "inline", style: "height: 2.5rem;", alt: "Plausible logo") %>
         </a>
@@ -20,7 +20,7 @@
     <%= render @view_module, @view_template, assigns %>
 
     <p class="text-center text-gray-500 text-xs py-8">
-      ©2020 Plausible Analytics. All rights reserved.
+      ©2020 Sharpe Group. All rights reserved.
     </p>
 
     <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
