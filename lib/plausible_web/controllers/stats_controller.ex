@@ -23,7 +23,7 @@ defmodule PlausibleWeb.StatsController do
       |> render("stats.html",
         site: site,
         has_goals: Plausible.Sites.has_goals?(site),
-        title: "Plausible · " <> site.domain,
+        title: "SHARPEnet Hub Web Analytics - " <> site.domain,
         offer_email_report: offer_email_report,
         demo: demo
       )
